@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pt-BR" data-flavor="coffee-wake">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baits · Sabores</title>
+<meta name="description" content="Três sabores de cereal Baits: Coffee Wake, Flow Crunch e Banana Rings.">
+<link rel="preload" href="assets/hero-barras-2.jpg" as="image">
+<link rel="preload" href="assets/fonts/noka-black.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/noka-bold.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/parkinsans-variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/baits-coffee-wake.glb" as="fetch" crossorigin>
+<link rel="stylesheet" href="styles.css?v=17">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#topo" aria-label="Baits, início">Baits</a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#produtos">Barras</a>
+      <a href="#sabores" aria-current="page">Sabores</a>
+      <a href="#sabores">Cereais</a>
+      <a href="#encontre">Encontre sua Baits</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="nav__pill nav__lang" type="button" aria-label="Idioma: português">
+        <span class="nav__icon" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.2"/><path d="M2.8 10h14.4M10 2.8c2.2 2.4 2.2 12 0 14.4M10 2.8c-2.2 2.4-2.2 12 0 14.4"/></svg></span>PT
+      </button>
+      <button class="nav__pill nav__cart" id="open-cart" type="button" aria-haspopup="dialog" aria-controls="cart">
+        <span class="nav__icon" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M3 7.5h14l-1.3 8.2a1.5 1.5 0 0 1-1.5 1.3H5.8a1.5 1.5 0 0 1-1.5-1.3z"/><path d="M6.5 7.5 9 3M13.5 7.5 11 3M8 10.5v3.5M12 10.5v3.5"/></svg></span><span>Carrinho (<span id="nav-count">0</span>)</span>
+      </button>
+      <a class="nav__cta" href="#sabores">Quero experimentar</a>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+<section class="hero" id="topo" aria-roledescription="carrossel" aria-label="Destaques Baits">
+  <div class="hero__card" id="hero-card">
+    <div class="hero__track">
+      <article class="hero__slide is-on" aria-roledescription="slide" aria-label="1 de 3">
+        <img class="hero__img" style="--op: 50% 92%" src="assets/hero-barras-2.jpg" width="2048" height="1152" alt="Mulher segurando duas barras Baits na altura do rosto, Avelã com Coco e Brownie de Café." fetchpriority="high" draggable="false">
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__content">
+                    <h1 class="hero__title"><span class="hero__in">Ideia boa</span> <span class="hero__in">também dá fome</span></h1>
+          <p class="hero__text hero__in">Entre uma reunião e uma ideia brilhante, cabe uma Baits. Barras proteicas com sabor de pausa boa, feitas para acompanhar o ritmo do seu dia.</p>
+          <div class="hero__ctas hero__in">
+            <a class="hero__btn hero__btn--solid" href="#sabores">Escolha sua Baits<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+            <a class="hero__btn hero__btn--ghost" href="#por-dentro">Conheça por dentro<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          </div>
+        </div>
+      </article>
+      <article class="hero__slide" aria-roledescription="slide" aria-label="2 de 3">
+        <img class="hero__img" src="assets/hero-cereal.jpg" width="2048" height="1152" alt="Mulher comendo cereal Baits Flow Crunch na mesa de trabalho, ao lado do notebook." loading="lazy" draggable="false">
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__content">
+                    <h2 class="hero__title"><span class="hero__in">Criar dá fome,</span> <span class="hero__in">resolver também</span></h2>
+          <p class="hero__text hero__in">O job ocupa a cabeça. A Baits cabe no intervalo. Cereal crocante com proteína em três sabores: um para começar, um para o foco e um para a pausa.</p>
+          <div class="hero__ctas hero__in">
+            <a class="hero__btn hero__btn--solid" href="#produtos">Ver produtos<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+            <a class="hero__btn hero__btn--ghost" href="#por-dentro">Conheça por dentro<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          </div>
+        </div>
+      </article>
+      <article class="hero__slide" aria-roledescription="slide" aria-label="3 de 3">
+        <img class="hero__img" src="assets/hero-cesta.jpg" width="2560" height="1440" alt="Mão pegando uma barra Baits Avelã com Coco de uma cesta rosa cheia de barras dos três sabores." loading="lazy" draggable="false">
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__content">
+          <h2 class="hero__title"><span class="hero__in">Proteína com</span> <span class="hero__in">muito sabor</span></h2>
+          <p class="hero__text hero__in">Brownie de café, banana com nozes ou avelã com coco. Qual vai acompanhar sua próxima ideia?</p>
+          <div class="hero__ctas hero__in">
+            <a class="hero__btn hero__btn--solid" href="#produtos">Ver barrinhas<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+            <a class="hero__btn hero__btn--ghost" href="#por-dentro">Conheça por dentro<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="hero__controls">
+      <button class="hero__next" type="button" aria-label="Ver próximo destaque">
+        <span class="hero__next-media" aria-hidden="true">
+          <img src="assets/hero-barras-2.jpg" alt="" draggable="false">
+          <img src="assets/hero-cereal.jpg" alt="" draggable="false">
+          <img src="assets/hero-cesta.jpg" alt="" draggable="false" loading="lazy">
+        </span>
+        <span class="hero__next-info">
+          <span class="hero__next-label">A seguir</span>
+          <span class="hero__next-count"><b id="hero-now">01</b> / 03</span>
+        </span>
+        <span class="hero__next-bar" aria-hidden="true"><i></i></span>
+      </button>
+      <button class="hero__play" type="button" aria-label="Pausar carrossel" aria-pressed="false">
+        <svg class="hero__icon-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10M13 5v10"/></svg>
+        <svg class="hero__icon-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4.8v10.4L15.5 10z"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="inside" id="por-dentro" aria-labelledby="inside-title">
+  <div class="inside__stage">
+    <header class="inside__intro">
+      <p class="inside__kicker">Por dentro da Brownie de Café</p>
+      <h2 class="inside__title" id="inside-title"><span>Abre que tem</span> <span>ideia dentro</span></h2>
+    </header>
+    <div class="inside__frame">
+      <div class="inside__media" aria-hidden="true"><canvas class="inside__bg" width="3" height="3"></canvas><canvas class="inside__canvas"></canvas></div>
+      <svg class="inside__lines" aria-hidden="true"></svg>
+      <div class="inside__copy">
+        <p class="inside__eyebrow"><i class="dot dot--start"></i>Brownie de Café · 45 g</p>
+        <p class="inside__total"><b id="inside-grams">0</b><span>g</span></p>
+        <p class="inside__label">de proteína por barra</p>
+        <p class="inside__text">Quatro camadas, cada uma com a sua parte da proteína. Nada de massa borrachuda: é brownie de verdade.</p>
+      </div>
+      <ol class="inside__callouts">
+        <li data-x=".652" data-y=".220" data-g="2"><span class="inside__n">01</span><strong>Cobertura de chocolate</strong><em>Casquinha fina que estala na mordida</em><b>+2 g de proteína</b></li>
+        <li data-x=".645" data-y=".370" data-g="3"><span class="inside__n">02</span><strong>Brownie de café</strong><em>Massa úmida com café arábica</em><b>+3 g de proteína</b></li>
+        <li data-x=".647" data-y=".507" data-g="5"><span class="inside__n">03</span><strong>Creme proteico</strong><em>Whey isolado batido com cacau</em><b>+5 g de proteína</b></li>
+        <li data-x=".636" data-y=".656" data-g="2"><span class="inside__n">04</span><strong>Base crocante</strong><em>Castanhas e aveia tostadas</em><b>+2 g de proteína</b></li>
+      </ol>
+      <p class="inside__hint" aria-hidden="true">Role para abrir</p>
+    </div>
+  </div>
+</section>
+
+<section class="flavors" id="sabores" data-flavor="coffee-wake" aria-labelledby="d-headline">
+  <!-- backgrounds (cross-faded) -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__layer" data-bg="coffee-wake" style="background-image:url(assets/bg-coffee-wake.jpg)"></div>
+    <div class="bg__layer" data-bg="flow-crunch" style="background-image:url(assets/bg-flow-crunch.jpg)"></div>
+    <div class="bg__layer" data-bg="banana-rings" style="background-image:url(assets/bg-banana-rings.jpg)"></div>
+    <div class="bg__layer bg__layer--combo" data-bg="combo">
+      <i style="background-image:url(assets/bg-coffee-wake.jpg)"></i>
+      <i style="background-image:url(assets/bg-flow-crunch.jpg)"></i>
+      <i style="background-image:url(assets/bg-banana-rings.jpg)"></i>
+    </div>
+    <div class="bg__grain"></div>
+  </div>
+
+  <!-- the headline is split around the box and sits behind it -->
+  <h2 class="headline" id="d-headline">
+    <span class="headline__a"><span class="headline__in" id="d-head-a">Seu dia começa</span></span>
+    <span class="headline__b"><span class="headline__in" id="d-head-b">pela colher</span></span>
+  </h2>
+
+  <!-- 3D stage -->
+  <div class="stage" id="stage">
+    <div class="stage__glow" id="glow" aria-hidden="true"></div>
+    <canvas id="scene" aria-label="Caixa de cereal Baits em 3D. Arraste para girar." role="img"></canvas>
+    <img class="stage__fallback" id="fallback" src="assets/thumb-coffee-wake.png" alt="" hidden>
+  </div>
+
+  <div class="topbar">
+    <p class="counter" aria-hidden="true"><span id="counter-now">01</span>/<span id="counter-total">04</span></p>
+  </div>
+
+  <article class="info" aria-live="polite">
+    <p class="info__name reveal" id="d-name">Coffee Wake</p>
+    <p class="info__text reveal" id="d-text">Café e granola crocante pra começar o dia com vontade.</p>
+    <div class="info__actions reveal">
+      <button class="cta" id="d-cta" type="button"><span id="d-cta-label">Quero Coffee Wake</span><span class="cta__arrow" aria-hidden="true">→</span></button>
+      <button class="cta-2" id="d-add" type="button" aria-label="Adicionar ao carrinho" title="Adicionar ao carrinho">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9h15l-1.4 9.2a1.8 1.8 0 0 1-1.8 1.5H6.7a1.8 1.8 0 0 1-1.8-1.5z"/><path d="M7.5 9 10.5 4M14.5 9 11.5 4"/></svg>
+        <span class="cta-2__plus" aria-hidden="true">+</span>
+      </button>
+    </div>
+  </article>
+
+  <aside class="buy reveal" aria-label="Preço">
+    <p class="buy__was" id="d-was" hidden></p>
+    <p class="buy__price"><small>R$</small><span id="d-price">29</span><sup id="d-cents">,90</sup></p>
+    <p class="buy__unit" id="d-unit">caixa de 350 g</p>
+  </aside>
+
+  <p class="hint" id="hint"><span aria-hidden="true">↻</span> Arraste pra girar · clique pra abrir</p>
+
+  <nav class="picker" aria-label="Escolha o sabor">
+    <div class="picker__list" role="tablist">
+      <button class="picker__item" role="tab" data-go="coffee-wake" aria-selected="true">
+        <span class="picker__thumb"><img src="assets/thumb-coffee-wake.png" alt="" width="240" height="240"></span>
+        <span class="picker__name">Coffee Wake</span>
+      </button>
+      <button class="picker__item" role="tab" data-go="flow-crunch" aria-selected="false">
+        <span class="picker__thumb"><img src="assets/thumb-flow-crunch.png" alt="" width="240" height="240"></span>
+        <span class="picker__name">Flow Crunch</span>
+      </button>
+      <button class="picker__item" role="tab" data-go="banana-rings" aria-selected="false">
+        <span class="picker__thumb"><img src="assets/thumb-banana-rings.png" alt="" width="240" height="240"></span>
+        <span class="picker__name">Banana Rings</span>
+      </button>
+      <button class="picker__item picker__item--combo" role="tab" data-go="combo" aria-selected="false">
+        <span class="picker__thumb">
+          <img src="assets/thumb-coffee-wake.png" alt="" width="240" height="240">
+          <img src="assets/thumb-banana-rings.png" alt="" width="240" height="240">
+          <img src="assets/thumb-flow-crunch.png" alt="" width="240" height="240">
+        </span>
+        <span class="picker__name">Combo</span>
+        <span class="picker__badge" aria-hidden="true">−11%</span>
+      </button>
+    </div>
+  </nav>
+</section>
+
+
+<section class="shop" id="produtos" aria-label="Produtos Baits">
+  <ul class="shop__grid" id="shop-track"></ul>
+</section>
+
+</main>
+
+<footer class="foot" id="encontre">
+  <div class="foot__card">
+    <div class="foot__top">
+      <form class="foot__news" id="foot-news" novalidate>
+        <p>Receba sabores novos,<br>lançamentos e ideias boas</p>
+        <label class="foot__field">
+          <span class="sr-only">Seu e-mail</span>
+          <input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required>
+          <button type="submit" aria-label="Cadastrar e-mail"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></button>
+        </label>
+      </form>
+      <nav class="foot__col" aria-label="Produtos">
+        <a href="#produtos">Barras <span aria-hidden="true">→</span></a>
+        <a href="#sabores">Cereais <span aria-hidden="true">→</span></a>
+        <a href="#por-dentro">Por dentro <span aria-hidden="true">→</span></a>
+        <a href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </nav>
+      <nav class="foot__col" aria-label="Redes sociais">
+        <a href="#" rel="noopener">Instagram <span aria-hidden="true">↗</span></a>
+        <a href="#" rel="noopener">TikTok <span aria-hidden="true">↗</span></a>
+        <a href="#" rel="noopener">Spotify <span aria-hidden="true">↗</span></a>
+      </nav>
+      <div class="foot__col foot__legal">
+        <p>© 2026 Baits<br>Mastiga essa ideia.</p>
+        <a href="#">Termos de uso <span aria-hidden="true">→</span></a>
+        <a href="#">Privacidade <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <p class="foot__mark" id="foot-mark" aria-hidden="true">Baits</p>
+  </div>
+</footer>
+
+<!-- cart drawer -->
+<div class="cart" id="cart" aria-hidden="true">
+  <div class="cart__scrim" data-close></div>
+  <aside class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1">
+    <header class="cart__head">
+      <button class="cart__close" type="button" data-close aria-label="Fechar carrinho"><svg viewBox="0 0 20 20"><path d="M5 5l10 10M15 5 5 15"/></svg></button>
+      <h2 id="cart-title">Carrinho</h2>
+      <span class="cart__count" id="cart-count" aria-label="itens">0</span>
+    </header>
+    <div class="cart__body">
+      <ul class="cart__items" id="cart-items"></ul>
+      <p class="cart__empty" id="cart-empty">Seu carrinho está vazio. Escolha um sabor e comece pela colher.</p>
+      <section class="cart__recs" id="cart-recs-wrap">
+        <h3>Você também vai gostar</h3>
+        <ul class="cart__items" id="cart-recs"></ul>
+      </section>
+      <details class="cart__notes">
+        <summary>Adicionar observação ao pedido</summary>
+        <textarea rows="3" placeholder="Ex.: deixar na portaria"></textarea>
+      </details>
+      <label class="cart__gift"><input type="checkbox"> Embalar para presente</label>
+    </div>
+    <footer class="cart__foot">
+      <div class="cart__subtotal"><span>Subtotal</span><strong id="cart-subtotal">R$ 0,00</strong></div>
+      <p>Frete calculado no checkout</p>
+      <button class="btn btn--outline" id="view-cart" type="button">Ver carrinho</button>
+      <button class="btn btn--solid" id="checkout" type="button">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4.5" y="9" width="11" height="8" rx="2"/><path d="M7 9V6.5a3 3 0 0 1 6 0V9"/></svg>
+        Finalizar compra
+      </button>
+    </footer>
+  </aside>
+</div>
+<p class="toast" id="toast" role="status"></p>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script type="module" src="hero.js?v=3"></script>
+<script type="module" src="main.js?v=5"></script>
+<script type="module" src="shop.js?v=8"></script>
+<script type="module" src="inside.js?v=6"></script>
+<script type="module" src="footer.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baits · Sabores</title>
+<meta name="description" content="Três sabores de cereal Baits: Coffee Wake, Flow Crunch e Banana Rings.">
+<link rel="preload" href="assets/fonts/noka-black.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/parkinsans-variable.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/baits-coffee-wake.glb" as="fetch" crossorigin>
+<link rel="stylesheet" href="styles-v1.css">
+</head>
+<body>
+
+<section class="flavors" id="sabores" data-flavor="coffee-wake" aria-labelledby="flavors-title">
+  <!-- backgrounds (cross-faded) -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__layer" data-bg="coffee-wake" style="background-image:url(assets/bg-coffee-wake.jpg)"></div>
+    <div class="bg__layer" data-bg="flow-crunch" style="background-image:url(assets/bg-flow-crunch.jpg)"></div>
+    <div class="bg__layer" data-bg="banana-rings" style="background-image:url(assets/bg-banana-rings.jpg)"></div>
+    <div class="bg__layer bg__layer--combo" data-bg="combo">
+      <i style="background-image:url(assets/bg-coffee-wake.jpg)"></i>
+      <i style="background-image:url(assets/bg-flow-crunch.jpg)"></i>
+      <i style="background-image:url(assets/bg-banana-rings.jpg)"></i>
+    </div>
+    <div class="bg__grain"></div>
+  </div>
+
+  <!-- giant flavour word behind the box -->
+  <div class="ghost" aria-hidden="true"><span class="ghost__word">Start</span></div>
+
+  <!-- 3D stage -->
+  <div class="stage" id="stage">
+    <div class="stage__glow" id="glow" aria-hidden="true"></div>
+    <canvas id="scene" aria-label="Caixa de cereal Baits em 3D. Arraste para girar." role="img"></canvas>
+    <img class="stage__fallback" id="fallback" src="assets/thumb-coffee-wake.png" alt="" hidden>
+    <p class="stage__hint"><span class="stage__hint-icon" aria-hidden="true">↻</span> Arraste para girar</p>
+  </div>
+
+  <header class="intro">
+    <p class="eyebrow"><span>03</span> · Sabores dos cereais</p>
+    <h2 class="visually-hidden" id="flavors-title">Três sabores. Qual é o seu momento?</h2>
+  </header>
+
+  <div class="topbar">
+    <button class="sound" id="sound" type="button" aria-pressed="true">
+      <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="sound__label">Som ligado</span>
+    </button>
+    <p class="counter" aria-hidden="true"><span id="counter-now">01</span><i></i><span id="counter-total">04</span></p>
+  </div>
+
+  <article class="details" aria-live="polite">
+    <p class="details__line reveal"><span id="d-pill-label">Linha</span> <strong id="d-line">START</strong></p>
+    <h3 class="details__title reveal"><span id="d-name-1">Coffee</span> <span class="details__title-2" id="d-name-2">Wake</span></h3>
+    <p class="details__tagline reveal" id="d-tagline">Seu dia começa pela colher.</p>
+    <p class="details__text reveal" id="d-text">Café e granola crocante em uma combinação que dá vontade de sair da cama. Sirva, acrescente seu leite favorito e comece pelo sabor.</p>
+    <a class="cta reveal" id="d-cta" href="#comprar"><span id="d-cta-label">Quero Coffee Wake</span><span class="cta__arrow" aria-hidden="true">→</span></a>
+  </article>
+
+  <aside class="buy" aria-label="Preço e informações">
+    <div class="buy__head reveal">
+      <p class="buy__label">Preço <s id="d-was" hidden></s></p>
+      <p class="buy__price"><small>R$</small><span id="d-price">29</span><sup id="d-cents">,90</sup></p>
+      <p class="buy__unit" id="d-unit">por caixa de 350 g</p>
+    </div>
+    <ul class="buy__specs reveal" id="d-specs"></ul>
+  </aside>
+
+  <nav class="picker" aria-label="Escolha o sabor">
+    <div class="picker__list" role="tablist">
+      <button class="picker__item" role="tab" data-go="coffee-wake" aria-selected="true">
+        <span class="picker__thumb"><img src="assets/thumb-coffee-wake.png" alt="" width="240" height="240"></span>
+        <span class="picker__name">Coffee Wake</span>
+      </button>
+      <button class="picker__item" role="tab" data-go="flow-crunch" aria-selected="false">
+        <span class="picker__thumb"><img src="assets/thumb-flow-crunch.png" alt="" width="240" height="240"></span>
+        <span class="picker__name">Flow Crunch</span>
+      </button>
+      <button class="picker__item" role="tab" data-go="banana-rings" aria-selected="false">
+        <span class="picker__thumb"><img src="assets/thumb-banana-rings.png" alt="" width="240" height="240"></span>
+        <span class="picker__name">Banana Rings</span>
+      </button>
+      <button class="picker__item picker__item--combo" role="tab" data-go="combo" aria-selected="false">
+        <span class="picker__thumb">
+          <img src="assets/thumb-coffee-wake.png" alt="" width="240" height="240">
+          <img src="assets/thumb-banana-rings.png" alt="" width="240" height="240">
+          <img src="assets/thumb-flow-crunch.png" alt="" width="240" height="240">
+        </span>
+        <span class="picker__name">Combo</span>
+        <span class="picker__badge" aria-hidden="true">−11%</span>
+      </button>
+    </div>
+  </nav>
+</section>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script type="module" src="main-v1.js"></script>
+</body>
+</html>
